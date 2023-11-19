@@ -2,16 +2,16 @@ import { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 import { Route, Routes } from "react-router-dom";
 import Nav from "./components/Nav";
+import CrearComentario from "./pages/CrearComentario";
 import CrearForo from "./pages/CrearForo";
 import Foros from "./pages/Foros";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Materia from "./pages/Materia";
+import MostrarForo from "./pages/MostrarForo";
 import Register from "./pages/Register";
 import Upload from "./pages/Upload";
 import User from "./pages/User";
-import MostrarForo from "./pages/MostrarForo";
-import CrearComentario from "./pages/CrearComentario";
 import VerComentario from "./pages/VerComentario";
 
 function App() {
@@ -68,16 +68,16 @@ function App() {
         <main className="main-content form-signin w-100 m-auto">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login setName={setName} />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/user" element={<User />} />
-            <Route path="/foros" element={<Foros />} />
-            <Route path="/materia" element={<Materia />} />
-            <Route path="/upload" element={<Upload />} />
-            <Route path="/crear-foro" element={<CrearForo />} />
+            <Route path="/Login" element={<Login setName={setName} />} />
+            <Route path="/Register" element={<Register />} />
+            <Route path="/User" element={<User />} />
+            <Route path="/Foros" element={<Foros />} />
+            <Route path="/Materia" element={<Materia />} />
+            <Route path="/Upload" element={<Upload />} />
+            <Route path="/CrearForo" element={<CrearForo />} />
             <Route path="/MostrarForo" element={<MostrarForo />} />
-            <Route path="/crear-comentario" element={<CrearComentario />} />
-            <Route path="/verComentario" element={<VerComentario />} />
+            <Route path="/CrearComentario" element={<CrearComentario />} />
+            <Route path="/VerComentario" element={<VerComentario />} />
           </Routes>
         </main>
       </Container>
