@@ -68,16 +68,16 @@ function App() {
         <main className="main-content form-signin w-100 m-auto">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/Login" element={<Login setName={setName} />} />
-            <Route path="/Register" element={<Register />} />
-            <Route path="/User" element={<User />} />
-            <Route path="/Foros" element={<Foros />} />
-            <Route path="/Materia" element={<Materia />} />
-            <Route path="/Upload" element={<Upload />} />
-            <Route path="/CrearForo" element={<CrearForo />} />
+            <Route path="/login" element={<Login setName={setName} />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/user" element={<User />} />
+            <Route path="/foros" element={<Foros />} />
+            <Route path="/materia" element={<Materia />} />
+            <Route path="/upload" element={<Upload />} />
+            <Route path="/crear-foro" element={<CrearForo />} />
             <Route path="/MostrarForo" element={<MostrarForo />} />
-            <Route path="/CrearComentario" element={<CrearComentario />} />
-            <Route path="/VerComentario" element={<VerComentario />} />
+            <Route path="/crear-comentario" element={<CrearComentario />} />
+            <Route path="/verComentario" element={<VerComentario />} />
           </Routes>
         </main>
       </Container>

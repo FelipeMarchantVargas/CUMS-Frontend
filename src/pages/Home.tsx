@@ -10,12 +10,12 @@ const noLogged = () => (
       Para acceder al contenido, debes tener una cuenta. ¿Aún no tienes una
       cuenta?
     </p>
-    <Button variant="primary" href="/Register">
+    <Button variant="primary" href="/register">
       Regístrate aquí
     </Button>
     <p>O</p>
     <p>¿Ya tienes tu cuenta?</p>
-    <Button variant="secondary" href="/Login">
+    <Button variant="secondary" href="/login">
       Inicia Sesión
     </Button>
   </div>

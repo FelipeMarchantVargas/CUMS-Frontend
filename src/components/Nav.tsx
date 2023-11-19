@@ -20,12 +20,12 @@ const LoggedMenu = ({ logout }: { logout: () => void }) => (
 const UnloggedMenu = () => (
   <ul className="navbar-nav me-auto mb-2 mb-md-0">
     <li className="nav-item">
-      <Link to="/Login" className="nav-link active">
+      <Link to="/login" className="nav-link active">
         Login
       </Link>
     </li>
     <li className="nav-item">
-      <Link to="/Register" className="nav-link active">
+      <Link to="/register" className="nav-link active">
         Register
       </Link>
     </li>
