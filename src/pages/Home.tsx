@@ -1,6 +1,7 @@
 // En Home.tsx
 import { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "../styles/Home.css";
 
 const noLogged = () => (
@@ -10,13 +11,13 @@ const noLogged = () => (
       Para acceder al contenido, debes tener una cuenta. ¿Aún no tienes una
       cuenta?
     </p>
-    <Button variant="primary" href="/register">
-      Regístrate aquí
+    <Button variant="primary" className="color: white">
+      <Link to={"/register"}>Regístrate aquí</Link>
     </Button>
     <p>O</p>
     <p>¿Ya tienes tu cuenta?</p>
-    <Button variant="secondary" href="/login">
-      Inicia Sesión
+    <Button variant="secondary" className="noLogBtn2">
+      <Link to={"/login"}>Inicia Sesión</Link>
     </Button>
   </div>
 );
@@ -32,8 +33,8 @@ const Logged = (name: string) => (
       className="btn-block m-2">
       Material
     </Button>
-    <Button variant="primary" href="/foros" className="btn-block m-2">
-      Foros
+    <Button variant="primary" className="btn-block m-2">
+      <Link to={"/foros"}>Foros</Link>
     </Button>
     <p className="discreet-message">
       El botón de Material te llevará a un Drive externo con material de la

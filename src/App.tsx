@@ -57,7 +57,7 @@ function App() {
     checkLoginStatus();
   }, []);
   return (
-    <>
+    <div>
       <Nav
         name={name}
         setName={setName}
@@ -81,7 +81,7 @@ function App() {
           </Routes>
         </main>
       </Container>
-    </>
+    </div>
   );
 }
 
