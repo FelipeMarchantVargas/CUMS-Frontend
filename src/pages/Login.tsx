@@ -5,7 +5,7 @@ const Login = (props: { setName: (name: string) => void }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
-  const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:3000";
+  const apiUrl = process.env.REACT_APP_API_URL;
 
   console.log(apiUrl);
 
@@ -18,7 +18,7 @@ const Login = (props: { setName: (name: string) => void }) => {
         return;
       }
 
-      const response = await fetch("${apiUri}/api/login", {
+      const response = await fetch("${apiUrl}/api/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",

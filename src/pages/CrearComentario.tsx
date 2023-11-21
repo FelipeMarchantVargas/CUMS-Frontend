@@ -4,7 +4,7 @@ import { BlockMath } from "react-katex";
 import "../styles/crearComentario.css";
 
 const CrearComentario = () => {
-  const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:3000";
+  const apiUrl = process.env.REACT_APP_API_URL;
   const searchParams = new URLSearchParams(location.search);
   const [description, setContenido] = useState<string>("");
   const [latex, setLatex] = useState<string>("");

@@ -45,7 +45,7 @@ const Logged = (name: string) => (
 
 const Home = () => {
   const [userName, setUserName] = useState("");
-  const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:3000";
+  const apiUrl = process.env.REACT_APP_API_URL;
   console.log(apiUrl);
 
   useEffect(() => {
