@@ -45,15 +45,16 @@ const Logged = (name: string) => (
 
 const Home = () => {
   const [userName, setUserName] = useState("");
-  const apiUrl = process.env.REACT_APP_API_URL;
-  console.log(apiUrl);
 
   useEffect(() => {
     (async () => {
-      const response = await fetch("${apiUrl}/api/user", {
-        headers: { "Content-Type": "application/json" },
-        credentials: "include",
-      });
+      const response = await fetch(
+        "https://cums-backend.onrender.com/api/user",
+        {
+          headers: { "Content-Type": "application/json" },
+          credentials: "include",
+        }
+      );
       const content = await response.json();
 
       // Set the user name in the Home component's state

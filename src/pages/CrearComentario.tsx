@@ -4,7 +4,6 @@ import { BlockMath } from "react-katex";
 import "../styles/crearComentario.css";
 
 const CrearComentario = () => {
-  const apiUrl = process.env.REACT_APP_API_URL;
   const searchParams = new URLSearchParams(location.search);
   const [description, setContenido] = useState<string>("");
   const [latex, setLatex] = useState<string>("");
@@ -12,16 +11,18 @@ const CrearComentario = () => {
   const id = searchParams.get("id");
   const handleSubmit = async (e: SyntheticEvent) => {
     e.preventDefault();
-    console.log(apiUrl);
-    const response = await fetch("${apiUrl}/api/CreateTComment/" + id, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      credentials: "include",
-      body: JSON.stringify({
-        description,
-        latex,
-      }),
-    });
+    const response = await fetch(
+      "https://cums-backend.onrender.com/api/CreateTComment/" + id,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        credentials: "include",
+        body: JSON.stringify({
+          description,
+          latex,
+        }),
+      }
+    );
     console.log(response);
     window.location.href = "/MostrarForo?id=" + id;
   };

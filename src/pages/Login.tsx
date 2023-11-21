@@ -5,9 +5,6 @@ const Login = (props: { setName: (name: string) => void }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
-  const apiUrl = process.env.REACT_APP_API_URL;
-
-  console.log(apiUrl);
 
   const submit = async (e: SyntheticEvent) => {
     try {
@@ -18,15 +15,18 @@ const Login = (props: { setName: (name: string) => void }) => {
         return;
       }
 
-      const response = await fetch("${apiUrl}/api/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        credentials: "include",
-        body: JSON.stringify({
-          email,
-          password,
-        }),
-      });
+      const response = await fetch(
+        "https://cums-backend.onrender.com/api/login",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          credentials: "include",
+          body: JSON.stringify({
+            email,
+            password,
+          }),
+        }
+      );
 
       if (!response.ok) {
         throw new Error("Login failed");

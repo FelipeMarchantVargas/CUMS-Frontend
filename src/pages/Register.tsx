@@ -7,14 +7,12 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [redirect, setRedirect] = useState(false);
-  const apiUrl = process.env.REACT_APP_API_URL;
   const navigate = useNavigate();
 
-  console.log(apiUrl);
   const submit = async (e: SyntheticEvent) => {
     e.preventDefault();
 
-    await fetch("${apiUrl}/api/register", {
+    await fetch("https://cums-backend.onrender.com/api/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
