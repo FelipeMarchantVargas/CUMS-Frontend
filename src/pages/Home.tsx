@@ -45,10 +45,12 @@ const Logged = (name: string) => (
 
 const Home = () => {
   const [userName, setUserName] = useState("");
+  const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:3000";
+  console.log(apiUrl);
 
   useEffect(() => {
     (async () => {
-      const response = await fetch("http://localhost:3000/api/user", {
+      const response = await fetch("${apiUrl}/api/user", {
         headers: { "Content-Type": "application/json" },
         credentials: "include",
       });
