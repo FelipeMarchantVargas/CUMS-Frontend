@@ -12,6 +12,7 @@ const CrearComentario = () => {
   const id = searchParams.get("id");
   const handleSubmit = async (e: SyntheticEvent) => {
     e.preventDefault();
+    console.log(apiUrl);
     const response = await fetch("${apiUrl}/api/CreateTComment/" + id, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
